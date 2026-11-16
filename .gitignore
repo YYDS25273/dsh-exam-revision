@@ -1,0 +1,14 @@
+# 依赖与构建产物
+node_modules/
+__pycache__/
+*.pyc
+
+# 渲染产物（用 assets 里的脚本随时可以重新生成）
+*.docx
+docs/_render/
+docs/demo.docx
+
+# 系统杂项
+.DS_Store
+Thumbs.db
+desktop.ini
