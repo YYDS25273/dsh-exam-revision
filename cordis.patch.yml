@@ -1,0 +1,12 @@
+# dsh-exam-revision 的 profile 补丁层。
+#
+# 被列进 profile 的 `dsh.profile.bundles` 后，这一层在 boot 时把宿主半
+# （package.json 的 exports["."] = lib/host.js）挂成 cordis 插件：
+#   - 注册 `exam_docx` 工具（题库 JSON → 排版好的 docx）
+#   - 把 skills/exam-revision 安装到 <DSH_HOME>/skills/（幂等，按版本号覆盖）
+#
+# 首次安装需要重启 DSH（bundles 列表只在 boot 时读取）。
+- insert:
+    - id: exam-revision
+      name: dsh-exam-revision
+      config: {}

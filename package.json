@@ -1,0 +1,38 @@
+{
+  "name": "dsh-exam-revision",
+  "version": "0.1.1",
+  "type": "module",
+  "description": "把复习题截图转成带详解的 Word：提供 exam_docx 工具（题库 JSON → 排版好的 docx）与 exam-revision 技能（读图 → 解题 → 建题库）。",
+  "exports": {
+    ".": "./lib/host.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "skills",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "@deepseek-ai/dsh-tools": "*"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/dsh-tools": {
+      "optional": true
+    }
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "exam",
+    "revision",
+    "docx"
+  ],
+  "license": "MIT",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
